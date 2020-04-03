@@ -2,7 +2,7 @@ package clients
 
 import (
 	"cloud.google.com/go/firestore"
-	"github.com/covidlocaldev/common/fhir/resources"
+	"github.com/covidlocaldev/common/emr/resources"
 	"log"
 	"net/http"
 	"os"
