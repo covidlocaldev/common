@@ -2,17 +2,17 @@ package clients
 
 import (
 	"fmt"
-	"github.com/covidlocaldev/common/fhir/resources"
+	"github.com/covidlocaldev/common/emr/resources"
 	"log"
 	"net/http"
 	"os"
 )
 
-type FHIRClient struct {
+type EMRClient struct {
 	HttpServiceClient
 }
 
-func NewFHIRClient() *FHIRClient {
+func NewEMRClient() *EMRClient {
 	serviceHost := os.Getenv("BASE_SERVICE_URL")
 
 	if len(serviceHost) == 0 {
@@ -21,7 +21,7 @@ func NewFHIRClient() *FHIRClient {
 
 	log.Printf("service host: %s", serviceHost)
 
-	return &FHIRClient{
+	return &EMRClient{
 		HttpServiceClient{
 			Client:      http.DefaultClient,
 			ServiceHost: serviceHost,
@@ -37,6 +37,6 @@ type CreateResourceResponse struct {
 	Resource resources.Resource
 }
 
-func (client *FHIRClient) CreateResource(req CreateResourceRequest) (resp *http.Response, err error) {
-	return client.Post(fmt.Sprintf("/fhir/resources/%s", req.Resource.GetResourceType()), req.Resource)
+func (client *EMRClient) CreateResource(req CreateResourceRequest) (resp *http.Response, err error) {
+	return client.Post(fmt.Sprintf("/emr/resources/%s", req.Resource.GetResourceType()), req.Resource)
 }
