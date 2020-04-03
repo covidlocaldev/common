@@ -6,7 +6,7 @@ import (
 )
 
 type Person struct {
-	// http://hl7.org/implement/standards/emr/STU3/person.html
+	// http://hl7.org/implement/standards/fhir/STU3/person.html
 	BaseResource
 	Identifier []Identifier               `firestore:"identifier,omitempty" json:"identifier"`
 	Active     bool                       `firestore:"active,omitempty" json:"active,omitempty"`
@@ -22,7 +22,7 @@ type Person struct {
 func (p Person) GetResourceType() string { return "Person" }
 
 type Patient struct {
-	// http://hl7.org/implement/standards/emr/STU3/patient.html
+	// http://hl7.org/implement/standards/fhir/STU3/patient.html
 	Person
 	DeceasedBoolean      bool             `firestore:"deceasedBoolean,omitempty" json:"deceasedBoolean,omitempty"`
 	DeceasedDateTime     *time.Time       `firestore:"deceasedDateTime,omitempty" json:"deceasedDateTime,omitempty"`
@@ -37,13 +37,13 @@ type Patient struct {
 func (p Patient) GetResourceType() string { return "Patient" }
 
 type RelatedPerson struct {
-	// http://hl7.org/implement/standards/emr/STU3/relatedperson.html
+	// http://hl7.org/implement/standards/fhir/STU3/relatedperson.html
 	Person
 	Relationship CodeableConcept `firestore:"relationship,omitempty" json:"relationship"`
 }
 
 type Practitioner struct {
-	// http://hl7.org/implement/standards/emr/STU3/practitioner.html
+	// http://hl7.org/implement/standards/fhir/STU3/practitioner.html
 	Person
 	Qualification []Qualification   `firestore:"qualification,omitempty" json:"qualification"`
 	Communication []CodeableConcept `firestore:"communication,omitempty" json:"communication"`
@@ -52,7 +52,7 @@ type Practitioner struct {
 func (p Practitioner) GetResourceType() string      { return "Practitioner" }
 
 type PractitionerRole struct {
-	// http://hl7.org/implement/standards/emr/STU3/practitionerrole.html
+	// http://hl7.org/implement/standards/fhir/STU3/practitionerrole.html
 	Identifier        []Identifier                 `firestore:"identifier,omitempty" json:"identifier"`
 	Active            bool                         `firestore:"active,omitempty" json:"active"`
 	Organization      Organization                 `firestore:"organization,omitempty" json:"organization"` // Organization where the roles are available
