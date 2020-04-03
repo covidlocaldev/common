@@ -11,7 +11,7 @@ const (
 )
 
 type Medication struct {
-	// http://hl7.org/implement/standards/fhir/STU3/medication.html
+	// http://hl7.org/implement/standards/emr/STU3/medication.html
 	BaseResource
 	Code             *CodeableConcept `firestore:"code,omitempty" json:"code"`
 	Status           MedicationStatus `firestore:"status,omitempty" json:"status"`
@@ -91,7 +91,7 @@ type MedicationRequestSubstitution struct {
 }
 
 type MedicationRequest struct {
-	// http://hl7.org/implement/standards/fhir/STU3/medicationrequest.html
+	// http://hl7.org/implement/standards/emr/STU3/medicationrequest.html
 	BaseResource
 	Definition                []Reference                    `firestore:"definition,omitempty" json:"definition"`
 	BasedOn                   []Reference                    `firestore:"basedOn,omitempty" json:"basedOn"`

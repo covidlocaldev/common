@@ -1,7 +1,7 @@
 package resources
 
 import (
-	"github.com/covidlocaldev/common/fhir/codes"
+	"github.com/covidlocaldev/common/emr/codes"
 )
 
 type Organization struct {
@@ -23,7 +23,7 @@ func (o Organization) IsGoalSubject()               {}
 func (o Organization) IsCarePlanActivityPerformer() {}
 
 type Location struct {
-	// http://hl7.org/implement/standards/fhir/STU3/location.html
+	// http://hl7.org/implement/standards/emr/STU3/location.html
 	Identifier   []Identifier                          `firestore:"identifier,omitempty" json:"identifier"`
 	Status       codes.LocationStatus                  `firestore:"status,omitempty" json:"status"`
 	Name         string                                `firestore:"name,omitempty" json:"name"`

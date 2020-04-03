@@ -2,7 +2,7 @@ package resources
 
 import (
 	"fmt"
-	"github.com/covidlocaldev/common/fhir/codes"
+	"github.com/covidlocaldev/common/emr/codes"
 	"time"
 )
 
@@ -161,7 +161,7 @@ type Ratio struct {
 	Denominator *Quantity `firestore:"denominator,omitempty" json:"denominator"`
 }
 
-// http://hl7.org/implement/standards/fhir/STU3/datatypes.html#Timing
+// http://hl7.org/implement/standards/emr/STU3/datatypes.html#Timing
 type Timing struct {
 	Event  *time.Time       `firestore:"event,omitempty" json:"event"`
 	Repeat *TimingRepeat    `firestore:"repeat,omitempty" json:"repeat"`

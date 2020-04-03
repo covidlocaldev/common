@@ -1,9 +1,9 @@
 package resources
 
-import "github.com/covidlocaldev/common/fhir/codes"
+import "github.com/covidlocaldev/common/emr/codes"
 
 type CarePlan struct {
-	// http://hl7.org/implement/standards/fhir/STU3/careplan.html
+	// http://hl7.org/implement/standards/emr/STU3/careplan.html
 	BaseResource
 	Definition  []Reference          `firestore:"definition,omitempty" json:"definition,omitempty"`
 	BasedOn     []Reference          `firestore:"basedOn,omitempty" json:"basedOn,omitempty"`
@@ -25,9 +25,9 @@ type CarePlan struct {
 }
 
 type ProcedureRequest struct {
-	// http://hl7.org/implement/standards/fhir/STU3/procedurerequest.html
+	// http://hl7.org/implement/standards/emr/STU3/procedurerequest.html
 }
 
 type ReferralRequest struct {
-	// http://hl7.org/implement/standards/fhir/STU3/referralrequest.html
+	// http://hl7.org/implement/standards/emr/STU3/referralrequest.html
 }

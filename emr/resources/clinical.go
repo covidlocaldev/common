@@ -1,7 +1,7 @@
 package resources
 
 import (
-	"github.com/covidlocaldev/common/fhir/codes"
+	"github.com/covidlocaldev/common/emr/codes"
 	"time"
 )
 
@@ -43,7 +43,7 @@ type Condition struct {
 }
 
 type Procedure struct {
-	// http://hl7.org/implement/standards/fhir/STU3/procedure.html
+	// http://hl7.org/implement/standards/emr/STU3/procedure.html
 	BaseResource
 	Definition         []Reference          `firestore:"definition,omitempty" json:"definition,omitempty"`
 	BasedOn            []Reference          `firestore:"basedOn,omitempty" json:"basedOn,omitempty"`
@@ -76,7 +76,7 @@ type ProcedurePerformer struct {
 }
 
 type FamilyMemberHistory struct {
-	// http://hl7.org/implement/standards/fhir/STU3/familymemberhistory.html
+	// http://hl7.org/implement/standards/emr/STU3/familymemberhistory.html
 	BaseResource
 	Definition       []Reference                    `firestore:"definition,omitempty" json:"definition,omitempty"`
 	Status           codes.FamilyHistoryStatusCode  `firestore:"status,omitempty" json:"status"`
@@ -110,7 +110,7 @@ type FamilyMemberHistoryCondition struct {
 }
 
 type ClinicalImpression struct {
-	// http://hl7.org/implement/standards/fhir/STU3/clinicalimpression.html
+	// http://hl7.org/implement/standards/emr/STU3/clinicalimpression.html
 	BaseResource
 	Status                   codes.ClinicalImpressionStatus    `firestore:"status,omitempty" json:"status"`
 	Code                     *CodeableConcept                  `firestore:"code,omitempty" json:"code,omitempty"`

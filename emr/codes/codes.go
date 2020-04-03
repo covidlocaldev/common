@@ -8,7 +8,7 @@ const (
 	IdentifierUseSecondary IdentifierUse = "secondary"
 )
 
-type IdentifierType = string // http://hl7.org/implement/standards/fhir/STU3/v2/0203/index.html#v2-0203-PRN
+type IdentifierType = string // http://hl7.org/implement/standards/emr/STU3/v2/0203/index.html#v2-0203-PRN
 
 const (
 	IdentifierTypeDriversLicenseNumber             IdentifierType = "DL"
@@ -125,7 +125,7 @@ const (
 	PatientRelationshipTypeUnknown                PatientRelationshipType = "U"
 )
 
-type QualificationCode = string // http://hl7.org/implement/standards/fhir/STU3/v2/0360/2.7/index.html
+type QualificationCode = string // http://hl7.org/implement/standards/emr/STU3/v2/0360/2.7/index.html
 
 type IdentityAssuranceLevel = string
 
@@ -146,7 +146,7 @@ const (
 	PractitionerRoleCodeTeacher    PractitionerRoleCode = "teacher"
 )
 
-type Specialty = string // http://hl7.org/implement/standards/fhir/STU3/valueset-c80-practice-codes.html
+type Specialty = string // http://hl7.org/implement/standards/emr/STU3/valueset-c80-practice-codes.html
 
 type LocationStatus = string
 
@@ -163,7 +163,7 @@ const (
 	LocationModeKind     LocationMode = "kind"
 )
 
-type ServiceDeliveryLocationRoleType = string // http://hl7.org/implement/standards/fhir/STU3/v3/ServiceDeliveryLocationRoleType/vs.html
+type ServiceDeliveryLocationRoleType = string // http://hl7.org/implement/standards/emr/STU3/v3/ServiceDeliveryLocationRoleType/vs.html
 const (
 	ServiceDeliveryLocationRoleTypeHospital           ServiceDeliveryLocationRoleType = "HOSP"
 	ServiceDeliveryLocationRoleTypeOutpatientFacility ServiceDeliveryLocationRoleType = "OF"
@@ -176,9 +176,9 @@ const (
 	LocationTypeBuilding LocationType = "bu"
 )
 
-type ServiceCategory = string // http://hl7.org/implement/standards/fhir/STU3/valueset-service-category.html
+type ServiceCategory = string // http://hl7.org/implement/standards/emr/STU3/valueset-service-category.html
 
-type ServiceType = string // http://hl7.org/implement/standards/fhir/STU3/valueset-service-type.html
+type ServiceType = string // http://hl7.org/implement/standards/emr/STU3/valueset-service-type.html
 
 type AllergyIntoleranceClinicalStatus = string
 
@@ -221,11 +221,11 @@ const (
 	AllergyIntoleranceCriticalityUnableToAssess AllergyIntoleranceCriticality = "unable-to-asses"
 )
 
-type AllergyIntoleranceCode = string // http://hl7.org/implement/standards/fhir/STU3/valueset-allergyintolerance-code.html
+type AllergyIntoleranceCode = string // http://hl7.org/implement/standards/emr/STU3/valueset-allergyintolerance-code.html
 
-type SubstanceCode = string // http://hl7.org/implement/standards/fhir/STU3/valueset-substance-code.html
+type SubstanceCode = string // http://hl7.org/implement/standards/emr/STU3/valueset-substance-code.html
 
-type ClinicalFindingCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-clinical-findings.html
+type ClinicalFindingCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-clinical-findings.html
 
 type AllergyIntoleranceSeverity = string
 
@@ -235,7 +235,7 @@ const (
 	AllergyIntoleranceSeveritySevere   AllergyIntoleranceSeverity = "severe"
 )
 
-type RouteCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-route-codes.html
+type RouteCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-route-codes.html
 
 type ConditionClinicalStatus = string
 
@@ -273,11 +273,11 @@ const (
 	ConditionSeverityMild     ConditionSeverity = 255604002
 )
 
-type BodyStructure = int // http://hl7.org/implement/standards/fhir/STU3/valueset-body-site.html
+type BodyStructure = int // http://hl7.org/implement/standards/emr/STU3/valueset-body-site.html
 
-type ConditionStageCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-condition-stage.html
+type ConditionStageCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-condition-stage.html
 
-type ManifestationAndSymptomCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-manifestation-or-symptom.html
+type ManifestationAndSymptomCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-manifestation-or-symptom.html
 
 type EventStatus = string
 
@@ -291,24 +291,24 @@ const (
 	EventStatusUnknown        EventStatus = "unknown"
 )
 
-type ProcedureNotPerformedReason = int // http://hl7.org/implement/standards/fhir/STU3/valueset-procedure-not-performed-reason.html
+type ProcedureNotPerformedReason = int // http://hl7.org/implement/standards/emr/STU3/valueset-procedure-not-performed-reason.html
 
-type ProcedureCategory = int // http://hl7.org/implement/standards/fhir/STU3/valueset-procedure-category.html
+type ProcedureCategory = int // http://hl7.org/implement/standards/emr/STU3/valueset-procedure-category.html
 
-type ProcedurePerformerRoleCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-performer-role.html
+type ProcedurePerformerRoleCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-performer-role.html
 
-type ProcedureReasonCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-procedure-reason.html
+type ProcedureReasonCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-procedure-reason.html
 
-type ProcedureOutcomeCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-procedure-outcome.html
+type ProcedureOutcomeCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-procedure-outcome.html
 const (
 	ProcedureOutcomeCodeSuccessful          ProcedureOutcomeCode = 385669000
 	ProcedureOutcomeCodeUnsuccessful        ProcedureOutcomeCode = 385671000
 	ProcedureOutcomeCodePartiallySuccessful ProcedureOutcomeCode = 385670004
 )
 
-type ConditionCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-condition-code.html
+type ConditionCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-condition-code.html
 
-type ProcedureFollowUpCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-procedure-followup.html
+type ProcedureFollowUpCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-procedure-followup.html
 
 type FamilyHistoryStatusCode = string
 
@@ -328,9 +328,9 @@ const (
 	FamilyHistoryNotDoneReasonDeferred       FamilyHistoryNotDoneReason = "deferred"
 )
 
-type FamilyMemberCode = string // http://hl7.org/implement/standards/fhir/STU3/v3/FamilyMember/vs.html
+type FamilyMemberCode = string // http://hl7.org/implement/standards/emr/STU3/v3/FamilyMember/vs.html
 
-type ConditionOutcomeCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-condition-outcome.html
+type ConditionOutcomeCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-condition-outcome.html
 
 type ClinicalImpressionStatus = string
 
@@ -340,15 +340,15 @@ const (
 	ClinicalImpressionStatusEnteredInError ClinicalImpressionStatus = "entered-in-error"
 )
 
-type InvestigationTypeCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-investigation-sets.html
+type InvestigationTypeCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-investigation-sets.html
 const (
 	InvestigationTypeExaminationOrSigns = 271336007
 	InvestigationTypeHistoryOrSymptoms  = 160237006
 )
 
-type ClinicalImpressionPrognosis = int // http://hl7.org/implement/standards/fhir/STU3/valueset-clinicalimpression-prognosis.html
+type ClinicalImpressionPrognosis = int // http://hl7.org/implement/standards/emr/STU3/valueset-clinicalimpression-prognosis.html
 
-type BodySiteLocationQualifierCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-bodysite-relative-location.html
+type BodySiteLocationQualifierCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-bodysite-relative-location.html
 
 type ObservationStatus = string
 
@@ -359,11 +359,11 @@ const (
 	ObservationStatusAmended     ObservationStatus = "amended"
 )
 
-type ObservationCategoryCode = string // http://hl7.org/implement/standards/fhir/STU3/valueset-observation-category.html
+type ObservationCategoryCode = string // http://hl7.org/implement/standards/emr/STU3/valueset-observation-category.html
 
-type ObservationCode = string // http://hl7.org/implement/standards/fhir/STU3/valueset-observation-codes.html
+type ObservationCode = string // http://hl7.org/implement/standards/emr/STU3/valueset-observation-codes.html
 
-type ObservationMethodCode = string // http://hl7.org/implement/standards/fhir/STU3/valueset-observation-methods.html
+type ObservationMethodCode = string // http://hl7.org/implement/standards/emr/STU3/valueset-observation-methods.html
 
 type CarePlanStatus = string
 
@@ -386,7 +386,7 @@ const (
 	CarePlanIntentOption   CarePlanIntent = "option"
 )
 
-type CarePlanCategoryCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-care-plan-category.html
+type CarePlanCategoryCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-care-plan-category.html
 
 type GoalStatus = string
 
@@ -436,9 +436,9 @@ const (
 	CarePlanActivityDetailCategoryOther       CarePlanActivityDetailCategory = "other"
 )
 
-type CarePlanActivityCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-care-plan-activity.html
+type CarePlanActivityCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-care-plan-activity.html
 
-type ActivityReasonCode = int // http://hl7.org/implement/standards/fhir/STU3/valueset-activity-reason.html
+type ActivityReasonCode = int // http://hl7.org/implement/standards/emr/STU3/valueset-activity-reason.html
 
 type CarePlanActivityStatus = string
 

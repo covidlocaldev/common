@@ -1,16 +1,16 @@
 package resources
 
 import (
-	"github.com/covidlocaldev/common/fhir/codes"
+	"github.com/covidlocaldev/common/emr/codes"
 	"time"
 )
 
 type DiagnosticReport struct {
-	// http://hl7.org/implement/standards/fhir/STU3/diagnosticreport.html
+	// http://hl7.org/implement/standards/emr/STU3/diagnosticreport.html
 }
 
 type Observation struct {
-	// http://hl7.org/implement/standards/fhir/STU3/observation.html
+	// http://hl7.org/implement/standards/emr/STU3/observation.html
 	BaseResource
 	BasedOn           []Reference             `firestore:"basedOn,omitempty" json:"basedOn,omitempty"`
 	Status            codes.ObservationStatus `firestore:"status,omitempty" json:"status"`
