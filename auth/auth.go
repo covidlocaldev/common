@@ -48,7 +48,10 @@ func Authenticated(next http.Handler) http.Handler {
 		}
 
 		r.Header.Set("X-User-UID", token.UID)
-		r.Header.Set("X-User-Role", token.Claims["role"].(string))
+
+		if token.Claims["role"] != nil {
+			r.Header.Set("X-User-Role", token.Claims["role"].(string))
+		}
 
 		next.ServeHTTP(w, r)
 	})
