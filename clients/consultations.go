@@ -50,7 +50,7 @@ func (client *ConsultationsClient) CreateConsultation(req CreateConsultationRequ
 }
 
 type DeliverChatConsultationKeyRequest struct {
-	Recipient string `json:"recipient"`
+	RecipientUID string `json:"recipientUID"`
 }
 
 type StartChatConsultationRequest struct {
