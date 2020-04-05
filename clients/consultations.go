@@ -49,6 +49,10 @@ func (client *ConsultationsClient) CreateConsultation(req CreateConsultationRequ
 	return client.Post("/consultations/internal/consultations", req)
 }
 
+type DeliverChatConsultationKeyRequest struct {
+	Recipient string `json:"recipient"`
+}
+
 type StartChatConsultationRequest struct {
 	Practitioner *firestore.DocumentRef `json:"practitionerRef"`
 	Consultation *firestore.DocumentRef `json:"consultationRef"`
