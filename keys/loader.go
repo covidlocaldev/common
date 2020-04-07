@@ -11,7 +11,7 @@ import (
 )
 
 const (
-	keysBucket = "covidlocal-staging-keys"
+	keysBucket = "covidlocal-keys"
 )
 
 func Load(keyType KeyType, env string) {
