@@ -6,12 +6,12 @@ type KeyType interface {
 
 type TwilioKey struct {
 	KeyType
-	AccountSID        	string
+	AccountSid        	string
 	AuthToken         	string
-	APIKeySID         	string
+	APIKeySid         	string
 	APIKeySecret      	string
-	PushCredentialSID 	string
-	TwimlApplicationSID string
+	PushCredentialSid 	string
+	TwimlApplicationSid string
 }
 
 func (k *TwilioKey) GetKeyFilePrefix() string {
