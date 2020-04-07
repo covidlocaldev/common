@@ -53,6 +53,10 @@ func Authenticated(next http.Handler) http.Handler {
 			r.Header.Set("X-User-Role", token.Claims["role"].(string))
 		}
 
+		if token.Claims["serviceAreaID"] != nil {
+			r.Header.Set("X-Service-Area-ID", token.Claims["serviceAreaID"].(string))
+		}
+
 		next.ServeHTTP(w, r)
 	})
 }
